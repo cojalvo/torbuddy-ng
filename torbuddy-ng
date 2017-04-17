@@ -60,7 +60,7 @@ if [ "$TIME" -lt "30" ];
 		echo -e "[\e[0;32mOK\e[0m]\e[0;37m	Continuing...\e[0m"
 	else
 		echo -e "[\e[0;32mOK\e[0m]\e[0;37m	Nameserver change every $TIME seconds\e[0m"
-		echo -e "[\e[0;33mINFO\e[0m]\e[0;37m	Ctrl-Z followed by & to put script to background...\e[0m"
+		echo -e "[\e[0;33mINFO\e[0m]\e[0;37m	Ctrl-Z followed by bg to put script to background...\e[0m"
 	fi
 
 function control_c {
@@ -71,7 +71,7 @@ sleep 0.5
 echo -e "[\e[0;32mOK\e[0m]\e[0;37m	Done, I'm outta here\e[0m"
 exit $?
 }
-## Capture SIGINT (Ctrl-C) and exit
+# Capture SIGINT (Ctrl-C) and exit
 trap control_c SIGINT
 for (( ; ; ))
 do 
