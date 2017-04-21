@@ -79,9 +79,8 @@ for (( ; ; ))
 do 
 sleep "$TIME"
 sudo kill $(pgrep -x tor)
-sleep 0.5
+sleep 0.2
 sudo tor --quiet
 echo -e "[\e[0;33mINFO\e[0m]\e[0;37m\t$TIME seconds until next IP change\n\e[0m"
-echo -e ""
 done
 
