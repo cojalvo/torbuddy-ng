@@ -1,11 +1,11 @@
 #!/bin/bash
 # ----------------------------------------------------------------------------- #
-# Job:		modified tor-buddy.sh script					#
-# Author:	buddylove							#
-# Web:		http://pirate-radio.eu						#
-# Mail:		admin@pirate-radio.eu						#
-# Forked:	http://learnnetsec.blogspot.com					#
-# Required:	see details in README.MD					#
+# Job:		modified tor-buddy.sh script										#
+# Author:	buddylove															#
+# Web:		http://pirate-radio.eu												#
+# Mail:		admin@pirate-radio.eu												#
+# Forked:	http://learnnetsec.blogspot.com										#
+# Required:	see details in README.MD											#
 # ----------------------------------------------------------------------------- #
 
 # --- variables --------------------------------------------------------------- #
@@ -16,13 +16,14 @@ CONFIGURATION="$(sudo tor --verify-config | grep 'Configuration was valid')"
 function control_c {
 echo -e "\n"
 echo -e "[\e[0;33m INFO \e[0m]\e[0;37m\tShutting down tor...\e[0m"
-sudo kill $(pgrep -x tor)
+systemctl stop tor
 sleep 0.5
 echo -e "[\e[0;32m  OK  \e[0m]\e[0;37m\tDone, I'm outta here\e[0m"
 exit $?
 }
 
 # --- script ------------------------------------------------------------------ #
+		echo -e ""
 		echo -e "[\e[0;33m INFO \e[0m]\e[0;37m\tTo stop the script press CTRL+C\e[0m"
 sleep 2
 		echo -e "[\e[0;33m INFO \e[0m]\e[0;37m\tChecking if Tor is installed...\e[0m"
@@ -42,10 +43,10 @@ if [ -z "$CONFIGURATION" ];
 sleep 1
 		echo -e "[\e[0;32m  OK  \e[0m]\e[0;37m\tConfiguration is clean\e[0m"
 		echo -e "[\e[0;32m  OK  \e[0m]\e[0;37m\tStarting TOR...\e[0m"
-		sudo tor --quiet;
+		systemctl start tor;
 else
 		echo -e "[\e[30;48;5;1m WARN \e[0m]\e[0;37m\tTor isn't installed!\e[0m"
-	        echo -e "[\e[0;33m INFO \e[0m]\e[0;37m\tTo install: apt-get update, then apt-get install tor\e[0m"
+	    echo -e "[\e[0;33m INFO \e[0m]\e[0;37m\tTo install: apt-get update, then apt-get install tor\e[0m"
 exit
 fi
 		echo -e "[\e[0;33m INFO \e[0m]\e[0;37m\tChecking if proxychains is installed...\e[0m"
@@ -80,7 +81,7 @@ do
 sleep "$TIME"
 sudo kill $(pgrep -x tor)
 sleep 0.2
-sudo tor --quiet
+systemctl restart tor
 echo -e "[\e[0;33m INFO \e[0m]\e[0;37m\t$TIME seconds until next IP change\n\e[0m"
 done
 
