@@ -1,16 +1,17 @@
-GENERAL:
-Watch this ->
+GENERAL: *
 
+Watch this -->
 https://www.youtube.com/watch?v=AedFlLSmJf8
 
-for further details.
+to get a grasp what it's about.
 
 Don't forget to modify your poxychains.conf and resolv.conf to go stealth.
 
-(Anonymous) nameservers ->
+Anonymous nameservers -->
 
-/media/buddylove/120gb-data/PROGRAMMING/ServerScripts/torbuddy-ng
+https://servers.opennicproject.org/
 
 
-REQUIREMENTS:
+REQUIREMENTS:*
+
 Run as root.
