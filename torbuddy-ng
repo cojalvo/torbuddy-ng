@@ -11,7 +11,7 @@
 # --- variables --------------------------------------------------------------- #
 DAEMON="/usr/bin/tor"
 CHAINS="/etc/proxychains.conf"
-CONFIGURATION="$(sudo tor --verify-config | grep 'Configuration was valid')"
+CONFIGURATION="$(tor --verify-config | grep 'Configuration was valid')"
 
 function control_c {
 echo -e "\n"
