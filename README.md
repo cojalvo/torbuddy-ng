@@ -12,4 +12,7 @@ Anonymous nameservers --> https://servers.opennicproject.org/
 
 REQUIREMENTS: *
 
-Run as root.
+Don't run as root.
+User running the script should modify his/her sudoers for example like
+
+<username>      HOSTS = (root:root) NOPASSWD: CMDS
