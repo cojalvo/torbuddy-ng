@@ -93,3 +93,4 @@ sudo tor --quiet
 echo -e "[\e[0;32m  OK  \e[0m]\e[0;37m\t$TIME seconds until next IP change\e[0m"
 done
 
+# END
