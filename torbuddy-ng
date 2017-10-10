@@ -1,12 +1,15 @@
 #!/bin/bash
-# ----------------------------------------------------------------------------- #
+
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
+#                                                                               #
 # Job:		modified tor-buddy.sh script										#
 # Author:	buddylove															#
 # Web:		http://pirate-radio.eu												#
 # Mail:		admin@pirate-radio.eu												#
 # Forked:	http://learnnetsec.blogspot.com										#
 # Required:	see details in README.MD											#
-# ----------------------------------------------------------------------------- #
+#                                                                               #
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
 
 # --- variables --------------------------------------------------------------- #
 DAEMON="/usr/bin/tor"
@@ -63,7 +66,7 @@ fi
 
 # loop
 		echo -e ""	
-		echo -e "[\e[0;32m  OK  \e[0m]\e[0;37m\tPlease enter how many seconds you want to grab a new IP:\c\e[0m"
+		echo -e "[\e[0;32m  OK  \e[0m]\e[0;37m\tPlease enter how many seconds you want to grab a new IP: \c\e[0m"
 trap control_c SIGINT
 	read TIME
 
@@ -75,6 +78,7 @@ if [ "$TIME" -lt "30" ];
 		echo -e "[\e[0;32m  OK  \e[0m]\e[0;37m\tNameserver changes every $TIME seconds\e[0m"
 		echo -e ""
 		echo -e "[\e[0;33m INFO \e[0m]\e[0;37m\tCtrl-Z followed by bg to put script to background...\e[0m"
+		echo -e ""
 	fi
 
 # Capture SIGINT (Ctrl-C) and exit
