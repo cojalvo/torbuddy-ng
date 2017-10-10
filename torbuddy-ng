@@ -1,15 +1,16 @@
 #!/bin/bash
 
-# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
-#                                                                               #
-# Job:		modified tor-buddy.sh script										#
-# Author:	buddylove															#
-# Web:		http://pirate-radio.eu												#
-# Mail:		admin@pirate-radio.eu												#
-# Forked:	http://learnnetsec.blogspot.com										#
-# Required:	see details in README.MD											#
-#                                                                               #
-# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ #
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+#
+# Job:		modified tor-buddy.sh script
+# Author:	buddylove
+# Web:		http://pirate-radio.eu
+# Mail:		admin@pirate-radio.eu
+# Forked:	http://learnnetsec.blogspot.com
+# Usage:    ./torbuddy-ng
+# Required:	see details in README.MD
+#
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 # --- variables --------------------------------------------------------------- #
 DAEMON="/usr/bin/tor"
