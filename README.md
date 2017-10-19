@@ -19,3 +19,5 @@ Don't run the script as root.
 Users running the script should modify their sudoers for example like
 
 <username>      HOSTS = (root:root) NOPASSWD: CMDS
+
+and generally delegate the script to a user with lower previleges.
