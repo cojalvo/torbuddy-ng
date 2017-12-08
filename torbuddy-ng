@@ -1,18 +1,20 @@
 #!/bin/bash
 
-# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 #
-# Job:		modified tor-buddy.sh script
+# Subject:	modified tor-buddy.sh script
 # Author:	buddylove
 # Web:		http://pirate-radio.eu
-# Mail:		admin@pirate-radio.eu
+# Mail:		info@pirate-radio.eu
 # Forked:	http://learnnetsec.blogspot.com
 # Usage:        ./torbuddy-ng
-# Required:	see details in README.MD
+# Required:	README.MD
 #
-# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+# @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
-# --- variables --------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+
+# --- variables -------------------------------------------------------------- #
 DAEMON="/usr/bin/tor"
 CHAINS="/etc/proxychains.conf"
 CONFIGURATION="$(sudo tor --verify-config | grep 'Configuration was valid')"
@@ -27,7 +29,8 @@ echo -e ""
 exit $?
 }
 
-# --- script ------------------------------------------------------------------ #
+
+# --- script ----------------------------------------------------------------- #
 		echo -e ""	
 		echo -e "[\\e[0;33m INFO \\e[0m]\\e[0;37m\\tTo stop the script press CTRL+C\\e[0m"
 sleep 2
