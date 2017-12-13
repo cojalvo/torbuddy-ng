@@ -36,12 +36,12 @@ exit $?
 sleep 2
 		echo -e "[\\e[0;33m INFO \\e[0m]\\e[0;37m\\tChecking if Tor is installed...\\e[0m"
 
-if [ -f "$DAEMON" ];
+if [[ -f "$DAEMON" ]];
 	then
 		echo -e "[\\e[0;32m  OK  \\e[0m]\\e[0;37m\\tTor is Installed!\\e[0m"
 		echo -e "[\\e[0;33m INFO \\e[0m]\\e[0;37m\\tChecking for clean configuration\\e[0m"
 
-if [ -z "$CONFIGURATION" ];
+if [[ -z "$CONFIGURATION" ]];
 	then
 		echo -e "[\\e[30;48;5;1m WARN \\e[0m]\\e[0;37m\\tInvalid configuration. Check torrc file. Exiting\\e[0m"
 	exit 1
@@ -59,7 +59,7 @@ exit
 fi
 		echo -e "[\\e[0;33m INFO \\e[0m]\\e[0;37m\\tChecking if proxychains is installed...\\e[0m"
 
-if [ -f "$CHAINS" ];
+if [[ -f "$CHAINS" ]];
 	then
 		echo -e "[\\e[0;32m  OK  \\e[0m]\\e[0;37m\\tProxychains is Installed!\\e[0m"
 	else
@@ -74,7 +74,7 @@ fi
 trap control_c SIGINT
 	read -r TIME
 
-if [ "$TIME" -lt "30" ];
+if [[ "$TIME" -lt "30" ]];
 	then
 		echo -e "[\\e[0;33m INFO \\e[0m]\\e[0;37m\\tWarning: Less than 30 seconds is not suggested!\\e[0m"
 		echo -e "[\\e[0;32m  OK  \\e[0m]\\e[0;37m\\tContinuing...\\e[0m"
